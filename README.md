@@ -16,7 +16,7 @@ Solution:
 
 >**_Automator Application_** > _Run Shell Script:_
 >```
->hdiutil attach /Users/$USER/Dropbox/*.sparsebundle && sleep 2 && open -a Google\ Chrome
+>hdiutil attach ~/Dropbox/*.sparsebundle && sleep 2 && open -a Google\ Chrome
 >```
 
 _hdiutil_ will try and mount the _sparsebundle_ disk image and prompt you for the decryption password. If successfully mounted, it will open _Chrome_ in 2 seconds.
@@ -67,3 +67,14 @@ echo "SYMLINKING CHROME PROFILE CACHE"
 ln -s /Volumes/"$IMGNAME"/Library/Caches/Google/Chrome/"$CHROMEPROFILE" ~/Library/Caches/Google/Chrome/"$CHROMEPROFILE"
 ```
 
+### Automator application launcher
+
+Now you need a special button to prompt for the decryption password and then launch Google Chrome.
+
+[<img src="_img/google-chrome-private-launcher.png" width="100px;"/><br /><sub>Download Chrome Automator application</sub>](https://github.com/reelsense/privacy-hacks/raw/master/Google%20Chrome%20Private.zip)<br />
+
+![](_img/automator-create.png)
+
+>```
+>hdiutil attach ~/Dropbox/*.sparsebundle && sleep 2 && open -a Google\ Chrome
+>```
