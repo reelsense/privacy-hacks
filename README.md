@@ -40,9 +40,11 @@ You can create a sparse bundle using Disk Utility in Mac OS X, as shown below.
 ### Copy profile and symlink it
 
 Replace the environment variables at the top. 
+
 Eg. `CHROMEPROFILE="Default"` Replace `Default` with your Chrome profile; _`CHROMEPROFILE="Profile 5"`_.
 
 Also add the name of the disk image.
+
 Eg. `IMGNAME="Example"` replace `Example` with `defeatsweat` or w/e your diskimage is called...
 
 ```
