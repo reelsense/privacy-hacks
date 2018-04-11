@@ -8,11 +8,16 @@ I occasionally need access to files or messages from my personal Google accounts
 * Tired of signing into Chrome Incognito tabs all the time.
 * Tired of this shit.
 
-Solution:
+### Solution:
 
 * Move Chrome profile to encrypted disk image.
 * Symlink profile back to `~/Library/Application\ Support/Google/Chrome/Default`
 * Create **_Automator Application_** to mount _img_ then _open Chrome_.
+
+**Bonus:**
+
+* Put it in a Dropbox folder so you can remote wipe it.
+* Use a dedicated _free_ account to limit data leakage.
 
 >**_Automator Application_** > _Run Shell Script:_
 >```
