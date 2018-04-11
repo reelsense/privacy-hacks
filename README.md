@@ -14,11 +14,6 @@ I occasionally need access to files or messages from my personal Google accounts
 * Symlink profile back to `~/Library/Application\ Support/Google/Chrome/Default`
 * Create **_Automator Application_** to mount _img_ then _open Chrome_.
 
-**Bonus:**
-
-* Put it in a Dropbox folder so you can remote wipe it.
-* Use a dedicated _free_ account to limit data leakage.
-
 >**_Automator Application_** > _Run Shell Script:_
 >```
 >hdiutil attach ~/Dropbox/*.sparsebundle && sleep 2 && open -a Google\ Chrome
@@ -27,6 +22,11 @@ I occasionally need access to files or messages from my personal Google accounts
 _hdiutil_ will try and mount the _sparsebundle_ disk image and prompt you for the decryption password. If successfully mounted, it will open _Chrome_ in 2 seconds.
 
 ### **:warning: Remember to UNCHECK _"Remember this password in my keychain"_** 
+
+**:fire: Bonus:**
+
+* Put it in a Dropbox folder so you can remote wipe it.
+* Use a dedicated _free_ account to limit data leakage.
 
 
 ## Instructions
