@@ -39,29 +39,29 @@ You can create a sparse bundle using Disk Utility in Mac OS X, as shown below.
 
 ### Copy profile and symlink it
 
-If there is a space in the profile folder name you will need to pass an additional back slash with an escape character.
-```
-export CHROMEPROFILE=Profile'\'\ 5 ; echo $CHROMEPROFILE
-```
-Will correctly result in "`Profile\ 5`", for the commands below to interpret properly.
+Replace the environment variables at the top. 
+Eg. `CHROMEPROFILE="Default"` Replace `Default` with your Chrome profile; _`CHROMEPROFILE="Profile 5"`_.
+
+Also add the name of the disk image.
+Eg. `IMGNAME="Example"` replace `Example` with `defeatsweat` or w/e your diskimage is called...
 
 ```
 echo "SETTING ENV VARIABLES"
-export IMGNAME=Example ; echo $IMGNAME
+export IMGNAME="Example" ; echo $IMGNAME
 export CHROMEPROFILE="Default" ; echo $CHROMEPROFILE
 echo "MOUNTING AND UNLOCKING CHROME PRIVATE PROFILE DISK IMAGE"
-hdiutil attach ~/Dropbox/$IMGNAME.sparsebundle
+hdiutil attach ~/Dropbox/"$IMGNAME".sparsebundle
 echo "CREATING CHROME PROFILE DIRECTORIES"
-mkdir /Volumes/$IMGNAME/Library /Volumes/$IMGNAME/Library/Application\ Support /Volumes/$IMGNAME/Library/Application\ Support/Google /Volumes/$IMGNAME/Library/Application\ Support/Google/Chrome /Volumes/$IMGNAME/Library/Application\ Support/Google/Chrome/"$CHROMEPROFILE"
+mkdir /Volumes/"$IMGNAME"/Library /Volumes/"$IMGNAME"/Library/Application\ Support /Volumes/"$IMGNAME"/Library/Application\ Support/Google /Volumes/"$IMGNAME"/Library/Application\ Support/Google/Chrome /Volumes/"$IMGNAME"/Library/Application\ Support/Google/Chrome/"$CHROMEPROFILE"
 echo "CREATING CHROME PROFILE CACHE DIRECTORIES"
-mkdir /Volumes/$IMGNAME/Library /Volumes/$IMGNAME/Library/Caches /Volumes/$IMGNAME/Library/Caches/Google /Volumes/$IMGNAME/Library/Caches/Google/Chrome /Volumes/$IMGNAME/Library/Caches/Google/Chrome/"$CHROMEPROFILE"
+mkdir /Volumes/"$IMGNAME"/Library /Volumes/"$IMGNAME"/Library/Caches /Volumes/"$IMGNAME"/Library/Caches/Google /Volumes/"$IMGNAME"/Library/Caches/Google/Chrome /Volumes/"$IMGNAME"/Library/Caches/Google/Chrome/"$CHROMEPROFILE"
 echo "COPYING CHROME PROFILE"
-cp -R ~/Library/Application\ Support/Google/Chrome/"$CHROMEPROFILE"/ /Volumes/$IMGNAME/Library/Application\ Support/Google/Chrome/"$CHROMEPROFILE"
+cp -R ~/Library/Application\ Support/Google/Chrome/"$CHROMEPROFILE"/ /Volumes/"$IMGNAME"/Library/Application\ Support/Google/Chrome/"$CHROMEPROFILE"
 echo "COPYING CHROME PROFILE CACHE"
-cp -R ~/Library/Caches/Google/Chrome/"$CHROMEPROFILE"/ /Volumes/$IMGNAME/Library/Caches/Google/Chrome/"$CHROMEPROFILE"
+cp -R ~/Library/Caches/Google/Chrome/"$CHROMEPROFILE"/ /Volumes/"$IMGNAME"/Library/Caches/Google/Chrome/"$CHROMEPROFILE"
 echo "SYMLINKING CHROME PROFILE"
-ln -s /Volumes/$IMGNAME/Library/Application\ Support/Google/Chrome/"$CHROMEPROFILE" ~/Library/Application\ Support/Google/Chrome/"$CHROMEPROFILE"
+ln -s /Volumes/"$IMGNAME"/Library/Application\ Support/Google/Chrome/"$CHROMEPROFILE" ~/Library/Application\ Support/Google/Chrome/"$CHROMEPROFILE"
 echo "SYMLINKING CHROME PROFILE CACHE"
-ln -s /Volumes/$IMGNAME/Library/Caches/Google/Chrome/"$CHROMEPROFILE" ~/Library/Caches/Google/Chrome/"$CHROMEPROFILE"
+ln -s /Volumes/"$IMGNAME"/Library/Caches/Google/Chrome/"$CHROMEPROFILE" ~/Library/Caches/Google/Chrome/"$CHROMEPROFILE"
 ```
 
