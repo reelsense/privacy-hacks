@@ -1,5 +1,5 @@
-# privacy-hacks
-:squirrel: Privacy for Mac users at work or on shared computers.
+# Portable Google Chrome Profile Privacy Hacks
+### :squirrel: Privacy for Mac users at work or on shared computers.
 
 I occasionally need access to files or messages from my personal Google accounts at work. I got tired of constantly have to sign into Chrome Incognito tabs every time, and I didn't want my personal Chrome profile and account credentials written to disk on a computer that's not mine.
 
@@ -83,3 +83,6 @@ Now you need a special button to prompt for the decryption password and then lau
 >```
 >hdiutil attach ~/Dropbox/*.sparsebundle && sleep 2 && open -a Google\ Chrome
 >```
+
+
+### [Return to my collection of browser tools and scripts](https://github.com/reelsense/browser-scripts-tools)
