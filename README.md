@@ -76,7 +76,15 @@ ln -s /Volumes/"$IMGNAME"/Library/Caches/Google/Chrome/"$CHROMEPROFILE" ~/Librar
 
 Now you need a special button to prompt for the decryption password and then launch Google Chrome.
 
-[<img src="_img/google-chrome-private-launcher.png" width="100px;"/><br /><sub>Download Chrome Automator application</sub>](https://github.com/reelsense/privacy-hacks/raw/master/Google%20Chrome%20Private.zip)<br />
+[<img src="_img/google-chrome-private-launcher.png" width="100px;"/><br />Download Chrome Automator application](https://github.com/reelsense/privacy-hacks/raw/master/Google%20Chrome%20Private.zip)<br />
+
+<sub>[Minisign Signature](https://raw.githubusercontent.com/reelsense/privacy-hacks/master/Google%20Chrome%20Private.zip.minisig) - [GPG Signature](https://raw.githubusercontent.com/reelsense/privacy-hacks/master/Google%20Chrome%20Private.zip.sig)</sub>
+
+```
+sha256 = 0c71b46d2696656135f8f7f8979fd55e0309c52baf7d274ad5b1e651cf09c4b2
+sha512 = ae9dd73c7e7df57611ed7c6e49ef3a632f9532d7e938e29af1c681a840b760ea35788ac21ae7d53016af7c5a920953f4870f803e18c10aad4693a366f73a9f9d
+```
+###### [What is the functional difference between a checksum and a signature?](http://mostvulnerable.com/#toc3)
 
 ![](_img/automator-create.png)
 
