@@ -26,7 +26,7 @@ _hdiutil_ will try and mount the _sparsebundle_ disk image and prompt you for th
 **:fire: Bonus:**
 
 * Put it in a Dropbox folder so you can remote wipe it.
-* Use a dedicated _free_ account to limit data leakage.
+* Use a dedicated _free_ Dropbox account to limit data leakage.
 
 
 ## Instructions
